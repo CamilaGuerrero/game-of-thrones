@@ -5,3 +5,5 @@
 dataContainer.forEach(element => {
     if(Element.characterName !== ""){
         savePrint = rootBox.innerHTML += 
+    }
+}
