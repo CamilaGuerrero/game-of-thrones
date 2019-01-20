@@ -1,10 +1,11 @@
  const rootBox = document.getElementById('root');
  const dataContainer = (DATA.characters);
  const printData = (dataContainer) =>{
-     const savePrint = "";
-dataContainer.forEach(element => {
+    // const savePrint = "";
+    let result ="";
+dataContainer.forEach( element => {
     if(Element.characterName !== ""){
-        savePrint = rootBox.innerHTML += `
+         result = rootBox.innerHTML += `
         <div>
         <div class='card'>
         <div class='box'>
@@ -15,9 +16,9 @@ dataContainer.forEach(element => {
         </div>
         </div>
         </div>`
-    
+    }  
 });
  return result;
 }
- window.onload = showData(allData);
-    }
+ window.onload = printData(dataContainer);
+    
