@@ -1,11 +1,11 @@
 body {background : #000000}
+
 .card {
     width: 500px;
     height: 500px;
     margin: 2em;
     background:#fff;
     text-align: center;
-    align-content: flex-start;
     border-radius: 12px;
   }  
   
@@ -19,4 +19,9 @@ body {background : #000000}
   .card .box .img img {
     width: 100%;
     height: 100%;
+}
+.card2
+{
+    background-color: #333333;
+    color:#fff;
 }

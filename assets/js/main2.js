@@ -1,29 +1,37 @@
+const showData2 = (EPISODES.episodes);
 const containerRoot2 = document.getElementById('root2');
-const Temps= document.getElementById("temps")
-const showData2 = (EPISODES.episodes)
-const showDataAgain =  (showData2) => {
+const temps= document.getElementById("temps");
+const showMeYourData =  (showData2) => {
 let result2 = ''; 
-showData2.forEach(element2 => {
-    if(element2.episodeDescription === ""){   
+showData2.forEach(element => {
+    if(element.episodeDescription === ""){   
   result2 = containerRoot2.innerHTML +=`
-  <div class="card">
-  <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4">
-    <p clas="nombreepisodio"><h6>${element2.episodeTitle}</h6></p>
-    <p>Capítulo ${element2.episodeNum} - Temporada ${element2.seasonNum}</p>
-    </span>
+  <div class="card2">
+  <div class="card-content2">
+  <h4><b>${element.episodeTitle}</b><br></h4>
+  <p>Sin Descripción</p>
   </div>
-
-  <div class="card-contentIcon">
-  <i class="material-icons activator">more_horiz</i>
+  <div class="card-body2">
+    <blockquote class="blockquote mb-0">
+      <p><b>Temporada</b> ${element.seasonNum}</p>
+       </blockquote>
   </div>
-  <div class="card-reveal">
-  <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-    <p>${element2.episodeDescription}</p>
-  </div>
-</div>
-   `
+</div>`
+    }else{
+    result2 = containerRoot2.innerHTML += `
+    <div class="card2">
+    <div class="card-content2">
+    <h4><b>${element.episodeTitle}</b><br></h4>
+    </div>
+    <div class="card-body2">
+      <blockquote class="blockquote mb-0">
+        <p>${element.episodeDescription}</p>
+        <p><b>Temporada</b> ${element.seasonNum}</p>
+         </blockquote>
+    </div>
+  </div>`
+}
 });
 return result2;
 }
-window.onload = showDataAgain;
+window.onload = showMeYourData(showData2);
